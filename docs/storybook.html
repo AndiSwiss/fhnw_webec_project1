@@ -10,6 +10,11 @@
       padding: 3em 1em;
     }
 
+    /*
+    |------------------------------------------------------|
+    | Header styling                                       |
+    |------------------------------------------------------|
+     */
     h1, footer {
       /* Since the body has padding (so that everything is padded), I need to switch h1 to position 'relative' and
         then, I can adjust the left position with -em: */
@@ -22,15 +27,31 @@
     }
 
     h1 {
+      font-size: 250%;
+    }
+
+    h2 {
       font-size: 200%;
     }
 
+    h3 {
+      font-size: 150%;
+    }
+
+    h3::before, h3::after {
+      content: " --- ";
+    }
+
+    /*
+    |------------------------------------------------------|
+    | Table styling                                        |
+    |------------------------------------------------------|
+     */
     table {
       width: 75%;
       max-width: 900px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
       background: linear-gradient(30deg, #3a7851, #6e5b2e);
-
     }
 
     td, th, tfoot {
@@ -59,18 +80,33 @@
       padding: 0.5em 0;
     }
 
-    tr.free {
+    tr.required {
       background-color: rgba(157, 57, 44, 0.5);
+    }
+
+    tr.free {
+      background-color: rgba(234, 244, 255, 0.2);
+      font-style: italic;
+    }
+
+    /*
+    |------------------------------------------------------|
+    | Further styling                                      |
+    |------------------------------------------------------|
+     */
+    a {
+      color: #ffc158;
+    }
+
+    a:hover, a:active {
+      color: #ffa016;
+
     }
 
     code {
       font-size: 125%;
       font-weight: bolder;
       padding: 0 0 0 0.25em;
-    }
-
-    h3::before, h3::after {
-      content: " --- ";
     }
 
 
@@ -138,9 +174,9 @@
           <td>Mo, 11.11.2019</td>
           <td>Role-based Security</td>
         </tr>
-        <tr>
+        <tr class="required">
           <td>Mo, 18.11.2019</td>
-          <td>Übungsvorbereitung ** Anwesenheitspflicht **</td>
+          <td>Übungsvorbereitung, <strong> ** Anwesenheitspflicht **</strong></td>
         </tr>
         <tr class="free">
           <td></td>
@@ -154,9 +190,9 @@
           <td>Mo, 09.12.2019</td>
           <td>Responsive / Mobile Web</td>
         </tr>
-        <tr>
+        <tr class="required">
           <td>Mo, 16.12.2019</td>
-          <td>Weihnachtsvorlesung, ** Übungsabgabe **</td>
+          <td>Weihnachtsvorlesung, <strong>** Übungsabgabe **</strong></td>
         </tr>
         <tr class="free">
           <td></td>
@@ -202,8 +238,8 @@
   </section>
 </main>
 <footer>
-  <address>Dierk König, 5.2B16, mailto:dierk.koenig@fhnw.ch</address>
-  <address>Christian Ribeaud, mailto:christian.ribeaud@fhnw.ch</address>
+  <address>Dierk König, 5.2B16, <a href="mailto:dierk.koenig@fhnw.ch">dierk.koenig@fhnw.ch</a></address>
+  <address>Christian Ribeaud, <a href="mailto:christian.ribeaud@fhnw.ch">christian.ribeaud@fhnw.ch</a></address>
 </footer>
 </body>
 </html>
