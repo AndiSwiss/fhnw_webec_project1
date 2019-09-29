@@ -20,10 +20,10 @@
       /* Since the body has padding (so that everything is padded), I need to switch h1 to position 'relative' and
         then, I can adjust the left position with -em: */
       position: relative;
-      left: -2em;
+      left: -2.5em;
       width: 100vw;
       background: linear-gradient(30deg, #3a7851, #6e5b2e);
-      padding: 1em 2em;
+      padding: 1em 2.5em;
       color: white;
     }
 
@@ -118,6 +118,30 @@
       font-size: 125%;
       font-weight: bolder;
       padding: 0 0 0 0.25em;
+    }
+
+    ol {
+      list-style: none;
+      counter-reset: my-counter;
+      padding-bottom: 1em;
+    }
+
+    li {
+      counter-increment: my-counter;
+      margin: 0.25em;
+    }
+
+    li::before {
+      content: counter(my-counter);
+      background: #53784a;
+      color: white;
+      width: 2em;
+      height: 2em;
+      display: inline-block;
+      line-height: 2em;
+      border-radius: 50%;
+      text-align: center;
+      margin-right: 0.5em;
     }
 
 
@@ -238,11 +262,11 @@
     </article>
     <article id="criteria">
       <h3>Passing criteria</h3>
-      <ul>
+      <ol>
         <li>You have to attend the exercise preparation event.</li>
         <li>You have to do the exercise and deliver before the deadline.</li>
         <li>You have to attend the <dfn title="Modulschlussprüfung">final exam (MSP)</dfn>.</li>
-      </ul>
+      </ol>
       <p> Your exercise will determine your <abbr title="Erfahrungsnote">continuous assessment grade (EN)</abbr>. </p>
       <p> EN and MSP together make your final grade. </p>
     </article>
