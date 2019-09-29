@@ -8,7 +8,7 @@
     body {
       background: azure;
       font-family: 'Karla', sans-serif;
-      padding: 3em 1em;
+      padding: 3em 2em;
     }
 
     /*
@@ -20,11 +20,15 @@
       /* Since the body has padding (so that everything is padded), I need to switch h1 to position 'relative' and
         then, I can adjust the left position with -em: */
       position: relative;
-      left: -1em;
+      left: -2em;
       width: 100vw;
       background: linear-gradient(30deg, #3a7851, #6e5b2e);
-      padding: 1em;
+      padding: 1em 2em;
       color: white;
+    }
+
+    footer {
+      margin-top: 2.5em;
     }
 
     h1 {
@@ -37,6 +41,7 @@
 
     h3 {
       font-size: 150%;
+      margin-top: 1.5em;
     }
 
     h3::before, h3::after {
@@ -88,6 +93,11 @@
     tr.free {
       background-color: rgba(234, 244, 255, 0.2);
       font-style: italic;
+    }
+
+    abbr, dfn {
+      color: darkred;
+      font-weight: bolder;
     }
 
     /*
